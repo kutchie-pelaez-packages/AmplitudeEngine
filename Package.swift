@@ -11,8 +11,8 @@ let package = Package(
         .library(name: "AmplitudeEngine", targets: ["AmplitudeEngine"])
     ],
     dependencies: [
-        .package(name: "CoreUtils", url: "https://github.com/kutchie-pelaez/CoreUtils", .branch("master")),
-        .package(name: "AnalyticsTracker", url: "https://github.com/kutchie-pelaez/AnalyticsTracker", .branch("master")),
+        .package(name: "CoreUtils", url: "https://github.com/kutchie-pelaez-packages/CoreUtils", .branch("master")),
+        .package(name: "AnalyticsTracker", url: "https://github.com/kutchie-pelaez-packages/AnalyticsTracker", .branch("master")),
         .package(name: "Amplitude", url: "https://github.com/amplitude/Amplitude-iOS.git", from: "8.3.1")
     ],
     targets: [
