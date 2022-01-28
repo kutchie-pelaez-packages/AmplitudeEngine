@@ -8,7 +8,12 @@ let package = Package(
         .iOS("15")
     ],
     products: [
-        .library(name: "AmplitudeEngine", targets: ["AmplitudeEngine"])
+        .library(
+            name: "AmplitudeEngine", 
+            targets: [
+                "AmplitudeEngine"
+            ]
+        )
     ],
     dependencies: [
         .package(name: "Amplitude", url: "https://github.com/amplitude/Amplitude-iOS.git", from: "8.3.1"),
