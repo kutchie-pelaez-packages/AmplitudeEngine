@@ -1,7 +1,7 @@
 import Amplitude
 import AnalyticsEvent
 import AnalyticsTracker
-import CoreUtils
+import Core
 
 final class AmplitudeEngine: AnalyticsTracker {
     init(
