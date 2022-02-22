@@ -10,6 +10,7 @@ final class AmplitudeEngine: AnalyticsTracker {
     ) {
         self.apiKey = apiKey
         self.environment = environment
+        initializeSDK()
     }
 
     private let apiKey: String
@@ -17,9 +18,9 @@ final class AmplitudeEngine: AnalyticsTracker {
 
     private lazy var amplitude = Amplitude.instance()
 
-    // MARK: - Startable
+    // MARK: -
 
-    func start() {
+    private func initializeSDK() {
         guard environment.isProd else { return }
 
         amplitude.initializeApiKey(apiKey)
