@@ -28,9 +28,7 @@ final class AmplitudeEngine: AnalyticsTracker {
 
     // MARK: - CustomStringConvertible
 
-    var description: String {
-        "Amplitude"
-    }
+    var description: String { "Amplitude" }
 
     // MARK: - AnalyticsEngine
 
