@@ -1,9 +1,13 @@
 import Amplitude
-import AnalyticsEvent
-import AnalyticsTracker
+import Analytics
 import Core
 
 final class AmplitudeEngine: AnalyticsTracker {
+    private let apiKey: String
+    private let environment: Environment
+
+    private lazy var amplitude = Amplitude.instance()
+
     init(
         apiKey: String,
         environment: Environment
@@ -12,13 +16,6 @@ final class AmplitudeEngine: AnalyticsTracker {
         self.environment = environment
         initializeSDK()
     }
-
-    private let apiKey: String
-    private let environment: Environment
-
-    private lazy var amplitude = Amplitude.instance()
-
-    // MARK: -
 
     private func initializeSDK() {
         guard environment.isProd else { return }
